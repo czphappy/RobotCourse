@@ -1,5 +1,6 @@
 clear all;
 syms x1 x2 x3 x4 L L1 L2;
+syms k1 k2 k3 k4;
 A1 = [cos(x1) -sin(x1) 0 0;sin(x1) cos(x1) 0 0;0 0 1 0;0 0 0 1];
 A2 = [cos(x2) -sin(x2) 0 0;sin(x2) cos(x2) 0 L1;0 0 1 0;0 0 0 1];
 A3 = [cos(x3) -sin(x3) 0 0;sin(x3) cos(x3) 0 L2;0 0 1 0;0 0 0 1];
@@ -13,3 +14,4 @@ T0=[1 0 0 0;0 1 0 L1+L2;0 0 1 L;0 0 0 1];
 J=[0 L1.*cos(x1) L1.*cos(x1)+L2.*cos(x1+x2) 0;...
     0 L1.*sin(x1) L1.*sin(x1)+L2.*sin(x1+x2) 0;...
     0 0 0 1;0 0 0 0;0 0 0 0;1 1 1 0];
+K=[k1 0 0 0;0 k2 0 0;0 0 k3 0;0 0 0 k4];
